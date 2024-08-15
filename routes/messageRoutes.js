@@ -8,4 +8,6 @@ router.get("/new", messageController.getForms);
 
 router.post("/new", messageController.postMessages);
 
+router.get("/:id", messageController.getMessageById);
+
 module.exports = router;
