@@ -1,8 +1,10 @@
-<form method="POST" action="/new">
-    <h2>Let your message here:</h2>
-    <label for="author">Author</label>
-    <input type="text" name="author" id="author">
-    <label for="message">Message</label>
-    <input type="text" name="message" id="message">
-    <button type="submit"></button>
+<form action="/new" method="post" >
+    <fieldset>
+        <legend>Let your message here:</legend>
+        <label for="userName">User:</label>
+        <input type="text" id="userName" name="userName">
+        <label for="userMessage">Message:</label>
+        <input type="text" id="userMessage" name="userMessage">
+        <input type="submit" value="Submit">
+    </fieldset>
 </form>
