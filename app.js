@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/", messageRouter);
 
 // set the port with the dotenv
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 6000;
 
 app.listen(PORT, () => {
   console.log(`This server is running in ${PORT} port`);
