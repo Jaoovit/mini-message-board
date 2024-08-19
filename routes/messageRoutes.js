@@ -6,7 +6,7 @@ router.get("/new", messageController.getForms);
 
 router.post("/new", messageController.postMessage);
 
-router.get("/:id", messageController.getMessageById);
+router.get("/message/:id", messageController.getMessageById);
 
 router.get("/", messageController.getMessageInfo);
 
