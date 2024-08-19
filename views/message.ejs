@@ -1,6 +1,10 @@
 <div>
-    <h2><%= message.text %></h2>
-    <h3>Created By: <%= message.user %></h3>
-    <span>At: <%= message.added %> </span>
+    <% if (message) { %>
+        <h2><%= message.text %></h2>
+        <h3>Created By: <%= message.user %></h3>
+        <span>At: <%= message.added %></span>
+    <% } else { %>
+        <h2>Message not found</h2>
+    <% } %>
     <button><a href="/">Homepage</a></button>
 </div>
