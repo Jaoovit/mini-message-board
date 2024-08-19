@@ -4,14 +4,19 @@
     </head>
     <body>
         <h1>Messages</h1>
-        <button><a href="/new">Add new message</a></button>
         <ul>
-            <% for (let i = 0; i < messages.length; i++) { %>
-                <p><%= messages[i].text %></p>
-                <p><%= messages[i].user %></p>
-                <p><%= messages[i].added %></p>
-                <button><a href=<%= messages[i].id%>>See</a></button>
-            <% } %>
+            <% messages.forEach(function(message) { %>
+                <li>
+                    <strong>Username:</strong> <%= message.username %><br>
+                    <strong>Message:</strong> <%= message.message %><br>
+                    <strong>Date:</strong> <%= message.created_at.toLocaleString() %>
+                    <div>
+                        <button>Delete</button>
+                    </div>
+                </li>
+                <hr>
+            <% }) %>
         </ul>
+        <button><a href="/new">Add new message</a></button>
     </body>
 </html>
