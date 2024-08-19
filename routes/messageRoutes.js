@@ -12,4 +12,6 @@ router.get("/", messageController.getMessageInfo);
 
 router.post("/deleteMessages", messageController.deleteAllMessages);
 
+router.post("/deleteMessages/:id", messageController.deleteMessageById);
+
 module.exports = router;

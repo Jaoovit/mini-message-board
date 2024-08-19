@@ -23,9 +23,14 @@ async function getMessageUsingId(id) {
   return rows;
 }
 
+async function deleteMessageUsingId(id) {
+  await pool.query(`DELETE FROM user_messages WHERE id = ${id}`);
+}
+
 module.exports = {
   getAllUsernames,
   insertNewMessage,
   cleanUpMessageBoard,
   getMessageUsingId,
+  deleteMessageUsingId,
 };

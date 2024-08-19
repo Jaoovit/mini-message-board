@@ -28,10 +28,17 @@ async function deleteAllMessages(req, res) {
   res.send("Your message board is clean");
 }
 
+async function deleteMessageById(req, res) {
+  const messageId = req.params.id;
+  await db.deleteMessageUsingId(messageId);
+  res.send(`The message with id ${messageId} was deleted`);
+}
+
 module.exports = {
   getForms,
   postMessage,
   getMessageById,
   getMessageInfo,
   deleteAllMessages,
+  deleteMessageById,
 };

@@ -12,6 +12,9 @@
                     <strong>Date:</strong> <%= message.created_at.toLocaleString() %>
                 </li>
                 <button><a href="/message/<%= message.id %>">See</a></button>
+                <form action="/deleteMessages/<%= message.id %>" method="POST">
+                    <button type="submit">Delete</a></button>
+                </form>
                 <hr>
             <% }) %>
         </ul>
