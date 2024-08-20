@@ -13,6 +13,6 @@ and a port to run your database before SQLPORT=
 
 Run npm install
 
-Run node populatedb.js
+Run node db/populatedb.js
 
 Run node --watch app.js
