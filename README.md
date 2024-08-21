@@ -4,12 +4,13 @@ follow this steps:
 
 Update the name of the .env_template to .env and add:
 
-a port before PORT=
-a host before HOST=
-your database username before USERNAME=
-a name of your database before DB=
-your database password before PASSWORD=
-and a port to run your database before SQLPORT=
+a port after PORT=
+a host after HOST=
+your database username after USERNAME=
+a name of your database after DB=
+your database password after PASSWORD=
+a port to run your database after SQLPORT=
+a url to acess the database after DATABASE_URL=
 
 Run npm install
 

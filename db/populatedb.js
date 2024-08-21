@@ -3,11 +3,7 @@ require("dotenv").config();
 const { Client } = require("pg");
 
 // Environment variables
-const HOST = process.env.HOST;
-const USER = process.env.USER;
-const DB = process.env.DB;
-const PASSWORD = process.env.PASSWORD;
-const SQLPORT = process.env.SQLPORT;
+const DATABASE_URL = process.env.DATABASE_URL;
 
 // SQL query to create the table and insert sample data
 const SQL = `
@@ -28,7 +24,7 @@ VALUES
 async function main() {
   console.log("Seeding the database...");
   const client = new Client({
-    connectionString: `postgresql://${USER}:${PASSWORD}@${HOST}:${SQLPORT}/${DB}`,
+    connectionString: DATABASE_URL,
   });
 
   try {

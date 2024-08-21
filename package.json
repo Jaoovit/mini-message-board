@@ -5,5 +5,10 @@
     "express": "^4.19.2",
     "express-async-handler": "^1.2.0",
     "pg": "^8.12.0"
-  }
+  },
+  "scripts": {
+  "start": "node app.js",
+  "populate": "node db/populatedb.js"
+}
+
 }
