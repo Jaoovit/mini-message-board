@@ -14,6 +14,6 @@ a url to acess the database after DATABASE_URL=
 
 Run npm install
 
-Run node db/populatedb.js
+Run npm run populate
 
-Run node --watch app.js
+Run npm run start
